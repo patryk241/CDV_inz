@@ -1,0 +1,66 @@
+﻿@model Calendar.Web.Models.EventDto
+
+<form asp-action="CalendarEventEdit">
+    <input asp-for="EventId" hidden />
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-info">Create Product</h1>
+
+        <hr />
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-2">
+                <label asp-for="EventId" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="EventString" class="form-control" />
+                <span asp-validation-for="EventString" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="EventInt" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="EventInt" class="form-control" />
+                <span asp-validation-for="EventInt" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="EventDateTime" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <textarea asp-for="EventDateTime" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="EventDateTime" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="EventImageUrl" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="EventImageUrl" class="form-control" />
+                <span asp-validation-for="EventImageUrl" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="EventDouble" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="EventDouble" class="form-control" />
+                <span asp-validation-for="EventDouble" class="text-danger"></span>
+            </div>
+            <div class="col-5 offset-2">
+
+                <a asp-action="Calendar" class="btn-primary btn form-control ">Back to List</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Edit" class="btn btn-info form-control" />
+
+            </div>
+
+        </div>
+
+        <div>
+        </div>
+    </div>
+</form>
+
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
